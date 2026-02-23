@@ -1,0 +1,29 @@
+name: Agentlint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        run: pip install -r requirements.setup.txt
+      - name: Install deps
+        run: uv sync --all-extras
+      - name: Run agentlint (json)
+        run: uv run agentlint check --format json --fail-on error
+      - name: Emit SARIF
+        run: uv run agentlint check --format sarif --ruleset core,security-lite --fail-on error > agentlint.sarif
+      - name: Upload SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: agentlint.sarif

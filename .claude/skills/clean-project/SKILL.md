@@ -16,7 +16,6 @@ This skill provides a destructive but thorough way to repair a "broken" developm
 ## Workflow
 
 1. **Clean Project Artifacts**:
-
    - Run `make clean`. This script typically removes:
      - `.venv/`
      - `dist/`
@@ -26,12 +25,10 @@ This skill provides a destructive but thorough way to repair a "broken" developm
      - `.ruff_cache/`
 
 2. **Clean Tooling Cache**:
-
    - Clear Trunk cache: `trunk clean`.
    - Clear uv cache: `uv cache clean`.
 
 3. **Re-initialize Environment**:
-
    - Invoke the `setup-dev-env` skill to reinstall everything (e.g., `make setup`).
 
 4. **Verify Health**:

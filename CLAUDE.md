@@ -50,6 +50,7 @@ make clean      # Clean build artifacts
 - Development scripts in `dev/`
 - CI/CD workflows in `.github/workflows/`
 - Claude Code configuration in `.claude/`
+- Codex agent skills in `.agents/skills` (discovered when running Codex from this repo); optional overrides in `.codex/config.toml`
 - Document significant design decisions as Architecture Decision Records (ADRs) in `docs/adr`; use the `manage-adr` skill when `adr` is available
 
 ## Common Gotchas

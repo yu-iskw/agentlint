@@ -67,3 +67,6 @@ publish:
 .PHONY: test-publish
 test-publish:
 	bash ./dev/publish.sh "testpypi"
+
+sync-skills:
+	rsync -avz .claude/skills/ .agents/skills/
