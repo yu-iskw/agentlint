@@ -1,0 +1,6 @@
+# Repo agent skills live in .agents/skills and are auto-discovered by Codex when run
+# from this repository (see https://developers.openai.com/codex/skills/).
+# To disable a skill, uncomment and set path to that skill's SKILL.md:
+# [[skills.config]]
+# path = "/absolute/path/to/repo/.agents/skills/some-skill/SKILL.md"
+# enabled = false

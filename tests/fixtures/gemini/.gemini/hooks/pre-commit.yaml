@@ -1,0 +1,6 @@
+name: gemini-hook
+kind: hook
+trigger: pre_commit
+output_format: json
+tool_permissions:
+  - read

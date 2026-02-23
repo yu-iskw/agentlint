@@ -17,10 +17,10 @@ exclude = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/your_package"]
+packages = ["src/agentlint"]
 
 [project]
-name = "your-package"
+name = "agentlint"
 version = "0.1.0"
 authors = [{ name = "yu-iskw" }]
 readme = "README.md"
@@ -43,8 +43,8 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Typing :: Typed",
 ]
-description = "A dbt artifacts parser in python"
-dependencies = []
+description = "Static linter for coding-agent resources"
+dependencies = ["pyyaml>=6.0.2", "typer>=0.16.0"]
 
 [project.optional-dependencies]
 dev = [
@@ -57,3 +57,4 @@ dev = [
 ]
 
 [project.scripts]
+agentlint = "agentlint.cli:app"

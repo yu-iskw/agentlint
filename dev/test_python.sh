@@ -20,4 +20,4 @@ SCRIPT_FILE="$(readlink -f "$0")"
 SCRIPT_DIR="$(dirname "${SCRIPT_FILE}")"
 MODULE_DIR="$(dirname "${SCRIPT_DIR}")"
 
-pytest -v -s --cache-clear "${MODULE_DIR}/tests"
+uv run pytest -v -s --cache-clear "${MODULE_DIR}/tests"

@@ -1,0 +1,7 @@
+- id: agentlint-check
+  name: agentlint check
+  description: Validate coding-agent resources
+  entry: agentlint check --changed-files
+  language: python
+  types_or: [markdown, yaml, json]
+  pass_filenames: true
